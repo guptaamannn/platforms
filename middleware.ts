@@ -10,7 +10,7 @@ function extractSubdomain(request: NextRequest): string | null {
   console.log("hostname ::", hostname)
 
   // Local development environment
-  if (url.includes('localhost') || url.includes('127.0.0.1')) {
+  if (host.includes('localhost') || host.includes('127.0.0.1')) {
     console.log("localhost detected")
     // Try to extract subdomain from the full URL
     const fullUrlMatch = url.match(/http:\/\/([^.]+)\.localhost/);
